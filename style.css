@@ -28,10 +28,11 @@ header {
 
 .hero-section {
     margin-top: 2em;
+    width: 100%;
 }
 
 .hero-section-div {
-    height: 30vh;
+    height: 36vw;
     width: 100%;
     background: url("assets/tablet/image-hero.png");
     background-position: center center;
@@ -217,7 +218,42 @@ footer > .container {
     }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 65em) {
+    .hero-section {
+        margin-top: 4em;
+        margin-bottom: 4em;
+        display: flex;
+       
+        justify-content: center;
+    }
+    .hero-section-div {
+        z-index: 2;
+        height: 56vh;
+       
+        flex: 1;
+        background: url("assets/desktop/image-hero-left.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero-section-div-right {
+        z-index: 2;
+        height: 56vh;
+        flex: 1;
+        background: url("assets/desktop/image-hero-right.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero-section > .container {
+        flex: 1;
+        margin: 0;
+        padding: 0;
+        height: 30vh;
+    }
+
     .hero-section > .container,
     .first-section > .container {
         max-width: 50%;
