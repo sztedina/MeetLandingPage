@@ -31,12 +31,12 @@ header {
 }
 
 .hero-section-div {
-    height: 303px;
+    height: 30vh;
     width: 100%;
     background: url("assets/tablet/image-hero.png");
-    
+    background-position: center center;
     background-repeat: no-repeat;
-    object-fit: cover;
+    background-size: cover;
 }
 
 .hero-section > img{
