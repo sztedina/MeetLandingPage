@@ -13,9 +13,9 @@ body {
 }
 
 img, svg {
-    display: block;
-    max-width: 100%;
-    height: auto;
+    max-inline-size: 100%;
+  block-size: auto;
+    
 }
 
 header {
@@ -30,6 +30,15 @@ header {
     margin-top: 2em;
 }
 
+.hero-section-div {
+    height: 303px;
+    width: 100%;
+    background: url("assets/tablet/image-hero.png");
+    
+    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
 .hero-section > img{
     margin: auto;
 }
@@ -42,6 +51,7 @@ header {
     line-height: 1.2;
 }
 .container {
+    margin: auto;
     padding: 4em;
     display: flex;
     flex-direction: column;
@@ -64,6 +74,7 @@ header {
     color: white;
     padding: 1em 1.5em;
     border-radius: 28px;
+    white-space: nowrap;
 }
 
 .info-btn {
@@ -74,6 +85,7 @@ header {
     color: white;
     padding: 1em 1.5em;
     border-radius: 28px;
+    white-space: nowrap;
 }
 
 .light {
@@ -152,7 +164,7 @@ footer > .container {
     background-color: #4d96a9;
     background-blend-mode: multiply;
     background-repeat: no-repeat;
-    background-size: cover;
+    object-fit: cover;
     color: white;
 }
 
@@ -164,6 +176,7 @@ footer > .container {
     color: white;
     padding: 1em 1.5em;
     border-radius: 28px;
+    white-space: nowrap;
 }
 
 .footer-title {
@@ -175,4 +188,58 @@ footer > .container {
 
 .purple {
     color: #D9B8FF;
+}
+
+@media (min-width: 45em) {
+    .hero-section > .container,
+    .first-section > .container {
+        max-width: 70%;
+    }
+
+    .button-container {
+        flex-direction: row;
+    }
+
+    .img-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        
+    }
+
+    footer > .container {
+        width: 100%;
+        background: url("assets/tablet/image-footer.jpg");
+        background-color: #4d96a9;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+    }
+}
+
+@media (min-width: 60em) {
+    .hero-section > .container,
+    .first-section > .container {
+        max-width: 50%;
+    }
+
+    .img-container {
+        max-width: 80%;
+    }
+    footer > .container {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .footer-title {
+        flex: 1.5;
+    }
+
+    .footer-paragraph {
+        flex: 1;
+    }
+
+    .footer-download-btn {
+        flex: 0.5;
+    }
 }
